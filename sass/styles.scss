@@ -5,3 +5,140 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: $Very-dark-blue-body;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $Font-size-paragraph;
+    font-family: $Family-Outfit;
+}
+
+#card {
+    width: 350px;
+    background-color: $Very-dark-blue-card;
+    padding: 1.6rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#container-equilibrium-img{
+    width: 100%;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+
+        #icon-view {
+            display: block;
+        }
+
+        &::before {
+            opacity: 0.5;
+        }
+    }
+
+}
+
+#container-equilibrium-img::before {
+    content: "";
+    width: 100%;
+    height: 99%;
+    background-color: $Cyan;
+    position: absolute;
+    opacity: 0;
+    border-radius: 0.6rem;
+}
+
+#equilibrium-img {
+    width:100%;
+    border-radius: 0.6rem;
+}
+
+#icon-view {
+    width: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: $White;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:hover {
+        color: $Cyan;
+
+    }
+}
+
+#description {
+    color: $Soft-blue;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
+
+#nft-details {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+    }
+}
+
+#price {
+    color: $Cyan;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+#time-left {
+    color: $Soft-blue;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: $Very-dark-blue;
+}
+
+#creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+
+    img {
+        width: 2rem;
+        border-radius: 50%;
+        border: 1px solid $White;
+    }
+
+
+    p {
+        color: $Soft-blue;
+    }
+}
+
+#creator-name {
+    color: $White;
+
+    &:hover {
+        cursor: pointer;
+        color: $Cyan;
+    }
+}
